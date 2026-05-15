@@ -63,13 +63,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
             return peso->weight;
         }
         peso=list_next(auxi->value);
-
-
-        
     }
-
-    
-
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
