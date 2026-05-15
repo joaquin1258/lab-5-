@@ -55,7 +55,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         return -1;
     }
 
-    Edge peso=first_list(auxi->value);
+    Edge *peso=first_list(auxi->value);
 
     while(peso!=NULL){
 
