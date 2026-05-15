@@ -6,3 +6,30 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Fri May 15 06:52:55 PM UTC 2026: 
+ graph.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:58:5: error: unknown type name ‘edge’; did you mean ‘Edge’?
+   58 |     edge peso=first_list(auxi->value);
+      |     ^~~~
+      |     Edge
+graph.c:58:15: error: implicit declaration of function ‘first_list’ [-Wimplicit-function-declaration]
+   58 |     edge peso=first_list(auxi->value);
+      |               ^~~~~~~~~~
+graph.c:60:15: error: comparison between pointer and integer [-Werror]
+   60 |     while(peso!=NULL){
+      |               ^~
+graph.c:62:31: error: invalid type argument of ‘->’ (have ‘int’)
+   62 |         if (strcmp((void*)peso->target, (void*)label2)==0){
+      |                               ^~
+graph.c:63:24: error: invalid type argument of ‘->’ (have ‘int’)
+   63 |             return peso->weight;
+      |                        ^~
+graph.c:65:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   65 |         peso=list_next(auxi->value);
+      |             ^
+cc1: all warnings being treated as errors
+a771188
