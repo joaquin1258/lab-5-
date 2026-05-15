@@ -33,3 +33,26 @@ graph.c:65:13: error: assignment to ‘int’ from ‘void *’ makes integer fr
       |             ^
 cc1: all warnings being treated as errors
 a771188
+Fri May 15 06:53:12 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:58:15: error: implicit declaration of function ‘first_list’ [-Wimplicit-function-declaration]
+   58 |     Edge peso=first_list(auxi->value);
+      |               ^~~~~~~~~~
+graph.c:58:15: error: invalid initializer
+graph.c:60:15: error: invalid operands to binary != (have ‘Edge’ and ‘void *’)
+   60 |     while(peso!=NULL){
+      |               ^~
+graph.c:62:31: error: invalid type argument of ‘->’ (have ‘Edge’)
+   62 |         if (strcmp((void*)peso->target, (void*)label2)==0){
+      |                               ^~
+graph.c:63:24: error: invalid type argument of ‘->’ (have ‘Edge’)
+   63 |             return peso->weight;
+      |                        ^~
+graph.c:65:14: error: incompatible types when assigning to type ‘Edge’ from type ‘void *’
+   65 |         peso=list_next(auxi->value);
+      |              ^~~~~~~~~
+5ba0d74
