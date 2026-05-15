@@ -59,7 +59,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 
     while(peso!=NULL){
 
-        if (strcmp((void*)peso->target, (void*)label2)==0){
+        if (strcmp(peso->target, label2)==0){
             return peso->weight;
         }
         peso=list_next(auxi->value);
