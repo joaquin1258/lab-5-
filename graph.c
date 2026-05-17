@@ -28,16 +28,29 @@ int is_equal_string(void *key1, void *key2) {
 
 Graph* createGraph() {
 
-    Graph * grafo=(Graph*)malloc(sizeof(Graph));
+    /*Graph * grafo=(Graph*)malloc(sizeof(Graph));
 
     grafo->adjacencyMap=map_create(is_equal_string);
 
-    return grafo;
+    return grafo;*/
+    return NULL;
 }
 
 void addNode(Graph* g, const char* label) {
     
     if (!g || !label) return;
+
+    MapPair *auxi=map_search(g->adjacencyMap, (void*)label);
+
+    if (auxi==NULL){
+        return NULL;
+    }
+
+    List* lista_auxi=list_create();
+
+    map_inseert(g->adjacencyMap, label, lista_auxi);
+
+    
 
 }
 
