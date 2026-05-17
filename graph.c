@@ -27,8 +27,13 @@ int is_equal_string(void *key1, void *key2) {
  * ========================================= */
 
 Graph* createGraph() {
+
+    Graph * grafo=(Graph*)malloc(sizeof(Graph));
+
+    grafo->adjacencyMap=create_map(is_equal_string);
+
     
-    return NULL;
+    return grafo;
 }
 
 void addNode(Graph* g, const char* label) {
