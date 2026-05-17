@@ -252,3 +252,25 @@ Sun May 17 03:29:30 AM UTC 2026:
  tests:  12|0
 ========================================
 264a7e6
+Sun May 17 03:30:32 AM UTC 2026: 
+ graph.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:119:5: error: ‘x’ undeclared (first use in this function)
+  119 |     x
+      |     ^
+graph.c:119:5: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:119:6: error: expected ‘;’ before ‘return’
+  119 |     x
+      |      ^
+      |      ;
+......
+  122 |     return NULL;
+      |     ~~~~~~
+graph.c:123:1: error: control reaches end of non-void function [-Werror=return-type]
+  123 | }
+      | ^
+cc1: all warnings being treated as errors
+c9d3bff
