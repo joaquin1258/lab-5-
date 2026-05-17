@@ -33,7 +33,7 @@ Graph* createGraph() {
     grafo->adjacencyMap=map_create(is_equal_string);
 
     if (grafo==NULL){
-        return NULL
+        return NULL;
     }
     return grafo;
 }
