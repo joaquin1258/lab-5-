@@ -43,7 +43,7 @@ void addNode(Graph* g, const char* label) {
     MapPair *auxi=map_search(g->adjacencyMap, (void*)label);
 
     if (auxi==NULL){
-        return NULL;
+        return;
     }
 
     char* copia=strdup(label);
