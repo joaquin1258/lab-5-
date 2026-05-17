@@ -129,3 +129,17 @@ Sun May 17 12:33:26 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 a7f886d
+Sun May 17 12:34:06 AM UTC 2026: 
+ graph.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:27: error: too few arguments to function ‘calloc’
+   31 |     Graph * grafo=(Graph*)calloc(sizeof(Graph));
+      |                           ^~~~~~
+In file included from test.c:2:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdlib.h:675:14: note: declared here
+  675 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+e35be81
