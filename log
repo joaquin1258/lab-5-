@@ -197,3 +197,16 @@ map.h:18:33: note: expected ‘void *’ but argument is of type ‘const char *
       |                           ~~~~~~^~~
 cc1: all warnings being treated as errors
 5e77416
+Sun May 17 01:35:01 AM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:46:16: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   46 |         return NULL;
+      |                ^~~~
+graph.c:39:6: note: declared here
+   39 | void addNode(Graph* g, const char* label) {
+      |      ^~~~~~~
+753a982
